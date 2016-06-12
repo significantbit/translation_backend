@@ -1,4 +1,6 @@
 class TranslationsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @q = Translation.with_translations(I18n.locale).ransack(params[:q])
     @translations = @q.result(distinct: true).page(params[:page]).per(20)

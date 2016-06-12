@@ -34,6 +34,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem 'devise-bootstrap-views'
 gem 'activemodel-serializers-xml'
 gem 'globalize', github: 'globalize/globalize', branch: 'fix_type_cast_from_database'
 gem 'bootstrap-sass'
