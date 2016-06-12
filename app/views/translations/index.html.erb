@@ -1,0 +1,19 @@
+<h2><%= t('.title') %></h2>
+
+<p>
+  <%= link_to t('.create_new'), new_translation_path(locale: I18n.locale), class: 'btn btn-primary' %>
+</p>
+
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th><%= t('activerecord.attributes.translation.key') %></th>
+      <th><%= t('activerecord.attributes.translation.value') %></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @translations %>
+  </tbody>
+</table>

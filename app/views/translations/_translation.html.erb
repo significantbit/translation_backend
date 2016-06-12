@@ -1,0 +1,9 @@
+<tr>
+  <td class="nowrap"><code><%= translation.key %></code></td>
+  <td class="stretch">
+    <%= fa_icon('image') if translation.image.present? %>
+    <%= translation.computed_value %>
+  </td>
+  <td class="nowrap"><%= link_to t('.remove'), translation_path(translation, locale: I18n.locale), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
+  <td class="nowrap"><%= link_to t('.edit'), edit_translation_path(translation, locale: I18n.locale), class: 'btn btn-xs btn-info' %></td>
+</tr>

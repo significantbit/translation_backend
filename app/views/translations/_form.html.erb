@@ -1,0 +1,22 @@
+<%= simple_form_for @translation, url: @translation.new_record? ? translations_path(locale: I18n.locale) : translation_path(locale: I18n.locale) do |f| %>
+    <%= f.input :key %>
+
+    <% if @translation.image.present? %>
+        <div>
+          <%= image_tag @translation.image.url, width: 300 %>
+          <div class="form-group">
+            <label>
+
+              <%= f.check_box :remove_image %>
+              <%= t('.remove-image') %>
+            </label>
+          </div>
+
+        </div>
+    <% else %>
+        <%= f.input :value %>
+        <%= f.input :image %>
+    <% end %>
+
+    <%= f.button :submit %>
+<% end %>

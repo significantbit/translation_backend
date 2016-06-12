@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612085401) do
+ActiveRecord::Schema.define(version: 20160612092001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "translation_translations", force: :cascade do |t|
+    t.integer  "translation_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "value"
+    t.index ["locale"], name: "index_translation_translations_on_locale", using: :btree
+    t.index ["translation_id"], name: "index_translation_translations_on_translation_id", using: :btree
+  end
+
+  create_table "translations", force: :cascade do |t|
+    t.string   "key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
