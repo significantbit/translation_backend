@@ -8,6 +8,10 @@
 
 User.first_or_create email: 'user@example.com', password: '12345678'
 
+# Uncomment for test data
+=begin
 1000.times do
   Translation.create key: FFaker::Internet.slug(nil, '_'), value: FFaker::BaconIpsum.phrase()
 end
+=end
+
