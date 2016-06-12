@@ -2,4 +2,11 @@
   "name": "Translation backend",
   "description": "A simple translation backend",
   "repository": "https://github.com/significantbit/translation_backend"
+  "env": {
+    "RAILS_ENV": "production",
+    "AWS_SECRET_KEY": null,
+    "AWS_ACCESS_KEY_ID": null,
+    "AWS_REGION": "eu-west-1",
+    "S3_BUCKET": null
+  }
 }
