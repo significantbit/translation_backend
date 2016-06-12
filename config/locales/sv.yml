@@ -19,34 +19,38 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+sv:
+  helpers:
+    submit:
+      create: Skapa %{model}
+      update: Uppdatera %{model}
   translations:
     index:
-      title: All translations
-      create_new: Create new translation
-      search: Search
+      title: All översättningar
+      create_new: Skapa ny översättning
+      search: Sök
     edit:
-      title: Edit translation
+      title: Redigera översättning
     new:
-      title: Create new translation
+      title: Skapa ny översättning
     form:
-      remove_image: Remove image
+      remove_image: Ta bort bild
     translation:
-      remove: Remove
-      edit: Edit
+      remove: Ta bort
+      edit: Redigera
   activerecord:
     models:
-      translation: Translation
+      translation: Översättning
     attributes:
       translation:
-        key: Key
-        value: Value
-        image: Image
+        key: Nyckel
+        value: Värde
+        image: Bild
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
+    "yes": 'Ja'
+    "no": 'Nej'
     required:
-      text: 'required'
+      text: 'obligatorisk'
       mark: '*'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "Rätta till felen nedan:"

@@ -18,6 +18,7 @@ end
 
 group :development do
   gem 'dotenv-rails'
+  gem 'ffaker'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'listen', '~> 3.0.5'
@@ -41,3 +42,6 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'font-awesome-rails'
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
+gem 'bootstrap-kaminari-views'
+gem 'ransack', github: 'activerecord-hackery/ransack'
